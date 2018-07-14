@@ -1,8 +1,8 @@
 // Kata Link: https://codewars.com/kata/whats-my-golf-score
 
 function golfScoreCalculator(parList, scoreList){
-  parList = parList.split('').map(Number).reduce((a, b) => a + b);
-  scoreList = scoreList.split('').map(Number).reduce((a, b) => a + b);
+  parList = parList.split('').reduce((a, b) => +a + +b);
+  scoreList = scoreList.split('').reduce((a, b) => +a + +b);
   return scoreList - parList;
 }
 
